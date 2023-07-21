@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+
+public class EleventhEx {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner()
+
+	}
+
+}

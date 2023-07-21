@@ -1,0 +1,61 @@
+import java.util.Scanner;
+import java.util.Locale;
+import entities.PeopleVectors;
+
+
+public class TwelfthEx {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("quantas pessoas serão digitadas: ");
+		int quantasPessoas = scan.nextInt();
+		
+		PeopleVectors[] pessoas = new PeopleVectors[quantasPessoas];
+		
+		for (int i=0; i<pessoas.length; i++) {
+			pessoas[i] = new PeopleVectors();
+			
+			System.out.println("Dados da " + i + "a pessoa");
+			
+			System.out.print("Nome: ");
+			pessoas[i].setNome(scan.next());
+			
+			System.out.print("Idade: ");
+			pessoas[i].setIdade(scan.nextInt());
+			
+			System.out.print("Altura: ");
+			pessoas[i].setAltura(scan.nextDouble());
+		}
+		
+		System.out.println("altura media: ");
+		
+		int soma = 0;
+		
+		for (int i=0; i<pessoas.length;i++) {
+			soma += pessoas[i].getAltura();
+		}
+		
+		System.out.println(soma  / pessoas.length);
+		
+		System.out.println("as pessoas que tem menos de 16");
+		
+		int menor16  = 0;
+		
+		for (int i=0; i<pessoas.length;i++) {
+			if (pessoas[i].getIdade()<16) {
+				menor16 += 1;
+				
+				System.out.println(pessoas[i].getNome());
+			}
+		}
+		
+		System.out.println("a porcentagem das pessoas que tem menos de 16 é: ");1
+		
+		System.out.println(menor16*100/pessoas.length);
+		
+		
+	}
+
+}

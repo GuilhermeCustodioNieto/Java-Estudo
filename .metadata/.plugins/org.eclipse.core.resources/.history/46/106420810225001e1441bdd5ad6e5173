@@ -1,0 +1,8 @@
+package teory.classes.enums;
+
+enum OrderStatus {
+	PENDING_PAYMENT,
+	PROCESSING,
+	SHIPPED,
+	DELIVERED;
+}

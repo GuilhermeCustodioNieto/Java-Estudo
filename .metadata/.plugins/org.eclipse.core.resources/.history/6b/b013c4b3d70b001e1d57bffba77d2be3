@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+import java.util.Locale;
+
+
+public class ex001 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		Locale.setDefault(Locale.US);
+		
+		System.out.println("digite se você é estudante(sim ou não): ");
+		String estudante = scan.next();
+		
+		System.out.print("digite o valor do ingresso: ");
+		double vIngresso = scan.nextDouble();
+		
+		double precoIngresso  = valorIngresso(vIngresso, estudante);
+		System.out.printf("o preço do ingresso é %.2f", precoIngresso);
+		
+		scan.close();
+	}
+	
+	public static double valorIngresso(double valor, String estudanteValor) {
+		if (estudanteValor == "sim") {
+			return valor / 2.0;
+		}
+		else {
+			return valor;
+		}
+	}
+
+}
