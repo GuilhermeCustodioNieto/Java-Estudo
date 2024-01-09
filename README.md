@@ -1,5 +1,5 @@
 # Java
-![[Logo Java.png]]
+<img src="Logo-Java.png" alt="Logo do Java">
 
 Esse é um repositório focado no desenvolvimento das minhas habilidades com Java, para manter um estudo ativo nessa linguagem e assim me preparar par ao mercado de trabalho como um todo.
 
