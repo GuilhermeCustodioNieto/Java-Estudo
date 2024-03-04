@@ -6,7 +6,7 @@ public class CarRental {
 	private LocalDateTime start;
 	private LocalDateTime fininsh;
 	private Vehicle vehicle;
-	private Envoice invoice;
+	private Invoice invoice;
 	
 	public CarRental() {
 		
@@ -17,7 +17,6 @@ public class CarRental {
 		this.start = start;
 		this.fininsh = fininsh;
 		this.vehicle = vehicle;
-		this.invoice = invoice;
 	}
 
 	public LocalDateTime getStart() {
@@ -44,11 +43,11 @@ public class CarRental {
 		this.vehicle = vehicle;
 	}
 
-	public Envoice getInvoice() {
+	public Invoice getInvoice() {
 		return invoice;
 	}
 
-	public void setInvoice(Envoice invoice) {
+	public void setInvoice(Invoice invoice) {
 		this.invoice = invoice;
 	}
 
