@@ -21,9 +21,6 @@ public class ContractService {
 		this.paymentService = paymentService;
 	}
 
-	private double installmentCalcule(Contract contract, int months) {
-		return contract.getTotalValue() / months;
-	}
 	
 	public void processContract(Contract contract, Integer months) {
 		double basicQuota = contract.getTotalValue() / months;

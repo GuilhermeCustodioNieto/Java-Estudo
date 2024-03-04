@@ -28,7 +28,7 @@ public class Main {
 		System.out.print("Valor do contrato: ");
 		double amount = scan.nextDouble();
 		
-		System.out.println("Entre com o número de parcelas: ");
+		System.out.print("Entre com o número de parcelas: ");
 		int installmentAmount = scan.nextInt();
 		
 		Contract contract = new Contract(number, date, amount);
@@ -37,7 +37,7 @@ public class Main {
 		
 		contractService.processContract(contract, installmentAmount);
 		
-		System.out.println();
+		System.out.println("Prcelas: ");
 		
 		System.out.println(contract.toString());
 	}
