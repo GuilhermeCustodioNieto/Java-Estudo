@@ -9,10 +9,10 @@ Atualmente, contém estudo dos seguintes assuntos:
 - [x] Lógica de Programação
 - [x] Orientação a Objetos
 - [x] Tratamento de Exceções
-- [ ] Classes Utilitárias
-- [ ] IO e NIO
-- [ ] Colections
-- [ ] Generics
+- [x] Classes Utilitárias
+- [x] IO e NIO
+- [x] Colections
+- [x] Generics
 - [ ] Lambdas
 - [ ] Streams
 - [ ] Threads
