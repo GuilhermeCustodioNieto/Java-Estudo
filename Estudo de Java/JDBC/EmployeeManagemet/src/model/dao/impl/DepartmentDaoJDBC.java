@@ -22,7 +22,9 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         try{
             PreparedStatement st = conn.prepareStatement("\n" +
                     "INSERT INTO department(Name) Values\n" +
-                    "(?);");
+                    "(?);", Statement.RETURN_GENERATED_KEYS);
+
+            st.setString(1, obj.getName());
 
             int rowsAffected = st.executeUpdate();
             if(rowsAffected > 0){
@@ -50,6 +52,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 
             st.setInt(1, obj.getId());
             st.setString(2, obj.getName());
+            st.setInt(3, obj.getId());
 
             st.executeUpdate();
         } catch (SQLException e) {
@@ -57,11 +60,11 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         }
     }
     @Override
-    public void deleteById(Department obj) {
+    public void deleteById(Integer id) {
         try {
             PreparedStatement st = conn.prepareStatement("DELETE FROM department WHERE Id = ?");
 
-            st.setInt(1, obj.getId());
+            st.setInt(1, id);
 
             st.executeUpdate();
         } catch (SQLException e) {
