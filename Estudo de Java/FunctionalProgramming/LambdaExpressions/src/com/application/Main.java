@@ -17,9 +17,9 @@ public class Main {
         list.add(new Product("Tablet", 350.0));
         list.add(new Product("HD Case", 80.90));
 
-        Function<Product, String> func = p -> p.getName().toUpperCase();
 
-        List<String> names =  list.stream().map(func).collect(Collectors.toList());
+
+        List<String> names =  list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
         names.forEach(System.out::println);
     }
