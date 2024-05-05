@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c25462d-6dd2-4025-9543-bd3737c21152" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LambdaExpressions/com/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaExpressions/com/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LambdaExpressions/com/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaExpressions/com/entities/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LambdaExpressions/com/util/ProductPredicate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/entities/Product.java" afterDir="false" />
     </list>
