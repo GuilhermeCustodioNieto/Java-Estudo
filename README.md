@@ -13,10 +13,10 @@ Atualmente, contém estudo dos seguintes assuntos:
 - [x] IO e NIO
 - [x] Colections
 - [x] Generics
-- [ ] Lambdas
-- [ ] Streams
+- [x] Lambdas
+- [x] Streams
 - [ ] Threads
-- [ ] JDBC
+- [x] JDBC
 - [ ] Testes Unitários
 ## Maratonas de Programação 🏅
 
