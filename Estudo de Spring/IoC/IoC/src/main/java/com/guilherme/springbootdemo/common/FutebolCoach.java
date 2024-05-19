@@ -2,7 +2,7 @@ package com.guilherme.springbootdemo.common;
 
 import org.springframework.stereotype.Component;
 
-@Component("FutCoach")
+@Component
 public class FutebolCoach implements Coach {
 
     @Override
