@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
+
+
     private Coach coach;
 
     @Autowired
-    public DemoController(Coach coach){
+    public DemoController(@Qualifier("basketCoach") Coach coach){
+        System.out.println("In Constructor: " + getClass().getSimpleName());
         this.coach =  coach;
     }
 
