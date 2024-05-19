@@ -1,9 +1,9 @@
-package com.guilherme.springbootdemo;
+package com.guilherme.springbootdemo.common;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class FutebolCoach implements Coach{
+@Component("FutCoach")
+public class FutebolCoach implements Coach {
 
     @Override
     public String getDailyWorkout() {
