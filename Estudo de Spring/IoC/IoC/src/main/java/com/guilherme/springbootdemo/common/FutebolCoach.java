@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FutebolCoach implements Coach {
-    public FutebolCoach(){
-        System.out.println("In Constructor: " + getClass().getSimpleName());
-    }
+
 
     @Override
     public String getDailyWorkout() {
