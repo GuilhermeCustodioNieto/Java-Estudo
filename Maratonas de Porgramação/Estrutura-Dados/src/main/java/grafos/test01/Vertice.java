@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Vertice <TIPO>{
     private TIPO dado;
-    private ArrayList<TIPO> arestasEntrada;
-    private ArrayList<TIPO> arestasSaida;
+    private ArrayList<Aresta<TIPO>> arestasEntrada;
+    private ArrayList<Aresta<TIPO>> arestasSaida;
 
    public Vertice(TIPO valor){
        this.dado = valor;
-       this.arestasEntrada = new ArrayList<TIPO>();
-       this.arestasSaida = new ArrayList<TIPO>();
+       this.arestasEntrada = new ArrayList<Aresta<TIPO>>();
+       this.arestasSaida = new ArrayList<Aresta<TIPO>>();
    }
 
     public TIPO getDado() {
@@ -22,10 +22,10 @@ public class Vertice <TIPO>{
     }
 
     public void adicionarArestaEntrada(Aresta aresta){
-       this.arestasEntrada.add((TIPO) aresta);
+       this.arestasEntrada.add(aresta);
     }
 
     public void adicionarArestaSaida(Aresta aresta){
-        this.arestasSaida.add((TIPO) aresta);
+        this.arestasSaida.add(aresta);
     }
 }
