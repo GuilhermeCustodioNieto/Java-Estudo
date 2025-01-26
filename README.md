@@ -17,7 +17,12 @@ Atualmente, contém estudo dos seguintes assuntos:
 - [x] Streams
 - [ ] Threads
 - [x] JDBC
+- [x] JPA
 - [ ] Testes Unitários
+- [x] Spring Boot
+- [ ] Spring JPA
+- [ ] Spring Secutiry
+
 ## Maratonas de Programação 🏅
 
 Além disso, aqui contem estudos para maratonas de programação em geral, ou seja, praticas de exercícios e códigos das maratonas anteriormente praticadas.
