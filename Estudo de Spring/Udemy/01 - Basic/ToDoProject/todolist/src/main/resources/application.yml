@@ -1,14 +1,18 @@
 spring:
   application:
     name: ToDo List
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todolist
+    username: postgres
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
+
   jpa:
-    database: POSTGRESQL
+    database: postgresql
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
-    datasource:
-      platform: posgres
-      url: jdbc://postregsq://localhost:5432/todolist
-      password: 12345678
-      username: PostgreSQL 17
-      driverClassName: org.postgresql.Driver
+      ddl-auto: update
+  h2:
+    console:
+      enabled: false

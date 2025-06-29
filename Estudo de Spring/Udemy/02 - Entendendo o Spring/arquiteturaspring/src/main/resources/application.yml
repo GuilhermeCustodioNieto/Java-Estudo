@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Arquitetura Spring
+  jpa:
+    show-sql: true
+  main:
+    lazy-initialization: true
+
+app:
+  config:
+    variavel: X
+    valor1: 500

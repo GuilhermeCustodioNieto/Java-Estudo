@@ -1,13 +1,17 @@
 package guilhermenieto.projects.arquiteturaspring;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
+@EnableConfigurationProperties
 public class Application {
 
 	public static void main(String[] args) {
@@ -26,7 +30,8 @@ public class Application {
 
 		System.out.println("Nome da aplicação: " + applicationName);
 
-
+		ExemploValue exemploValue = applicationContext.getBean(ExemploValue.class);
+		exemploValue.imprimirVariavel();
 	}
 
 }
