@@ -1,6 +1,8 @@
 package com.guilherme.todolist.entities.task;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.guilherme.todolist.entities.task.enums.TaskStatus;
+import com.guilherme.todolist.entities.tasklist.TaskList;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -22,6 +24,11 @@ public class Task implements TaskInterface{
     @Column
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "task_list_id")
+    @JsonBackReference
+    private TaskList taskList;
 
     public Task() {
     }
@@ -67,6 +74,14 @@ public class Task implements TaskInterface{
 
     public void setStatus(TaskStatus status) {
         this.status = status;
+    }
+
+    public TaskList getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(TaskList taskList) {
+        this.taskList = taskList;
     }
 
     @Override
