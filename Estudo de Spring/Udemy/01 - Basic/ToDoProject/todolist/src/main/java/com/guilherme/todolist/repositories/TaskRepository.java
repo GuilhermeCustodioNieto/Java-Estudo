@@ -7,5 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TaskRepository extends JpaRepository<Task, Integer> {
-    List<Task> findByTitle(String title);
+    List<Task> findByTitleAndTaskListId(String title, Integer taskListId);
+
+    List<Task> findAllByTaskListId(Integer taskListId);
 }
