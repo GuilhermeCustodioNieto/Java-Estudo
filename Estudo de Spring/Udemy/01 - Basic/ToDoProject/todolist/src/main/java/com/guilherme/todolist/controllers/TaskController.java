@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("task-lists/{taskListId}/tasks")
 public class TaskController {
     private final TaskService taskService;
 
@@ -19,22 +19,24 @@ public class TaskController {
     }
 
     @PostMapping
-    public ResponseEntity<Task> createTask(@RequestBody TaskDTO taskDTO){
-        return ResponseEntity.ok(taskService.createTask(taskDTO));
+    public ResponseEntity<Task> createTask(@RequestBody TaskDTO taskDTO, @PathVariable("taskListId") Integer taskListId) {
+        try{
+            return ResponseEntity.ok(taskService.createForTaskList(taskListId, taskDTO));
+        } catch (Exception e){
+            return ResponseEntity.notFound().build();
+        }
+
+
     }
 
-    @GetMapping("/")
-    public ResponseEntity<List<Task>> findAllTasks(){
-        try{
-            List<Task> tasks = taskService.findAll();
-            return ResponseEntity.ok(tasks);
-        } catch(Exception e){
-            e.printStackTrace();
-            return ResponseEntity.internalServerError().build();
-
+    @GetMapping
+    public ResponseEntity<List<Task>> findAllTasks(@PathVariable("taskListId") Integer taskListId) {
+        try {
+            return ResponseEntity.ok(taskService.findAllByTaskList(taskListId));
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
         }
     }
-
 
     @GetMapping("/{id}")
     public ResponseEntity<Task> findById(@PathVariable("id") int id){
@@ -45,9 +47,9 @@ public class TaskController {
         }
     }
 
-    @GetMapping
-    public ResponseEntity<List<Task>> findByTitle(@RequestParam("title") String title){
-        return ResponseEntity.ok(taskService.findByTitle(title));
+    @GetMapping("/search")
+    public ResponseEntity<List<Task>> findByTitle(@RequestParam("title") String title, @PathVariable("taskListId") Integer taskListId){
+        return ResponseEntity.ok(taskService.findByTitle(title, taskListId));
     }
 
     @PatchMapping("/{id}")
