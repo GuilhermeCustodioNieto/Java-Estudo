@@ -1,0 +1,14 @@
+# Para criar a imagem do PosgreSQL
+docker run --name librarydb -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library postgres:16.3
+
+# Para criar a imagem do PG Admin
+ docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=guilhermecustodionieto@gmail.com -e PGADMIN_DEFAULT_PASSWORD=admin dpage/pgadmin4
+
+Configurações do banco de dados:
+host: localhost
+user: postgres
+password: postgres
+host: 5432
+database: library
+pgadmin_user: guilhermecustodionieto@gmail.com
+pgadmin_password: admin
